@@ -6,25 +6,48 @@ site_name: Dester Docs
 theme:
     name: "material"
     palette:
-        - scheme: default
-          primary: cyan
-          accent: indigo
-          toggle:
-              icon: material/weather-sunny
-              name: Switch to light mode
-        - scheme: slate
-          primary: cyan
-          accent: indigo
-          toggle:
-              icon: material/weather-night
-              name: Switch to dark mode
-    favicon: /favicon.ico
+      - scheme: default
+        primary: cyan
+        accent: indigo
+        toggle:
+          icon: material/brightness-7
+          name: Switch to dark mode
+      - scheme: slate
+        primary: cyan
+        accent: indigo
+        toggle:
+          icon: material/brightness-4
+          name: Switch to light mode
+    favicon: assets/favicon.ico
     icon:
         repo: fontawesome/brands/github
-    logo: /logo-dark-small.svg
+    logo: assets/logo-dark-small.svg
     font: false
     custom_dir: docs
-    custom_dir: assets
+    features:
+    - navigation.instant
+    - navigation.tracking
+    # - navigation.tabs
+    - navigation.indexes
+
+    - search.suggest
+    - search.share
+nav:
+  - What's Dester:
+    - index.md
+  - Getting Started:
+    - getting-started\prerequisite-setup.md
+    - getting-started\local-deployement.md
+    - getting-started\heroku-deployment.md
+    - getting-started\desktop-application.md
+  - Building:
+    - building\frontend.md
+    - building\backend.md
+    - building\desktop.md
+  - About:
+    - additional-info\main.md
+    - additional-info\privacy-policy.md
+    - additional-info\terms-and-conditions.md
 
 repo_name: "DesterLib/Dester"
 repo_url: "https://github.com/DesterLib/Dester"
@@ -37,8 +60,18 @@ markdown_extensions:
 
 plugins:
     - search
-    - awesome-pages
+    - git-authors
     - minify:
           minify_html: true
-    # - literate-nav:
-    #       nav_file: SUMMARY.md
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/DesterLib
+
+    - icon: fontawesome/brands/telegram 
+      link: https://telegram.dog/s/Dester_Community
+
+    - icon: fontawesome/solid/arrow-pointer 
+      link: https://demo.dester.gq
+
+copyright: Copyright &copy; 2021 - 2022 Dester Team
