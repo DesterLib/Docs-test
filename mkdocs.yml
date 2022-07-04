@@ -1,0 +1,44 @@
+# theme:
+#   name: material
+# site_name: Dester Docs
+site_name: Dester Docs
+
+theme:
+    name: "material"
+    palette:
+        - scheme: default
+          primary: cyan
+          accent: indigo
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to light mode
+        - scheme: slate
+          primary: cyan
+          accent: indigo
+          toggle:
+              icon: material/weather-night
+              name: Switch to dark mode
+    favicon: /favicon.ico
+    icon:
+        repo: fontawesome/brands/github
+    logo: /logo-dark-small.svg
+    font: false
+    custom_dir: docs
+    custom_dir: assets
+
+repo_name: "DesterLib/Dester"
+repo_url: "https://github.com/DesterLib/Dester"
+
+markdown_extensions:
+    - markdown.extensions.admonition
+    - markdown.extensions.codehilite:
+          guess_lang: false
+    - markdown.extensions.meta
+
+plugins:
+    - search
+    - awesome-pages
+    - minify:
+          minify_html: true
+    # - literate-nav:
+    #       nav_file: SUMMARY.md
